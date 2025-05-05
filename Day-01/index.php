@@ -105,6 +105,29 @@
                    //  visitCounter(); // 1
                    //  visitCounter(); // 2
                    //  visitCounter(); // 3
-            
+       
                    
+    // PHP echo and print Statements
+       // echo Statement
+          // Used to display one or more strings.
+          // Faster than print.          
+          // Does not return any value.         
+          // Can take multiple parameters (comma-separated).
+                // Example
+                   // echo "Hello, World!";
+                   // echo "Name: ", " Ali", " - Age: ", 25;
+        //print Statement
+             // Also used to display strings.
+             // Returns 1, so it can be used in expressions.
+             // Can only take one argument.
+             // Slightly slower than echo.
+                    // Example
+                        //  print "Hello, World!";
+                        //  $value = print "This returns 1";
+                        //  echo "<br>";
+                        //  echo "Value: " . $value;  // Output: Value: 1
+
+
+
+    
    ?>
