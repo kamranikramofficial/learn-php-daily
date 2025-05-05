@@ -51,6 +51,60 @@
          // To get the data type of a variable, use the var_dump() function.
     
     
-     //  PHP Variables Scope
+    //  PHP Variables Scope
+         //In PHP, variables can be declared anywhere in the script.
+         //The scope of a variable is the part of the script where the variable can be referenced/used.
+         //PHP has three different variable scopes:
+         //local
+         //global
+         //static
 
- ?>
+    //  Global Scope 
+        //  A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function: 
+         // Example
+            // $x = 5; // global scope
+            // function myTest() {
+            //   // using x inside this function will generate an error
+            //   echo "<p>Variable x inside function is: $x</p>";
+            // }
+            // myTest();
+            // echo "<p>Variable x outside function is: $x</p>";     
+    // Local Scope   
+         // A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:
+        //  You can have local variables with the same name in different functions, because local variables are only recognized by the function in which they are declared.   
+         // Example
+                // function myTest() {
+                //     $x = 5; // local scope
+                //     echo "<p>Variable x inside function is: $x</p>";
+                //   }
+                //   myTest();  
+                //   // using x outside the function will generate an error
+                //   echo "<p>Variable x outside function is: $x</p>";
+    
+    // PHP The global Keyword
+        // The global keyword is used to access a global variable from within a function.
+        // To do this, use the global keyword before the variables (inside the function):
+                // Example
+                    // $x = 5;
+                    // $y = 10;
+                    // function myTest() {
+                    //   global $x, $y;
+                    //   $y = $x + $y;
+                    // }
+                    // myTest();
+                    // echo $y; // outputs 15
+
+    // PHP The static Keyword
+        // The static keyword in PHP is used to define static properties and methods in a class, or to define static variables inside a function that retain their value between function calls.
+               // Example
+                   // function visitCounter() {
+                   //  static $visits = 0;
+                   //  $visits++;
+                   //  echo "This function was called $visits times.\n";
+                   //  }
+                   //  visitCounter(); // 1
+                   //  visitCounter(); // 2
+                   //  visitCounter(); // 3
+            
+                   
+   ?>
